@@ -11,15 +11,14 @@
 
 .row {
     width: auto;
-    height: 100px;
+    height: 100%;
 
     background: #313131;
 }
 
 .square {
-    width: 100px;
-    height: 100px;
-
+    height: 100%;
+    width: 100%;
     margin: 0px;
 
     outline: 1px solid;

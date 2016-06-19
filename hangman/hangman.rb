@@ -43,12 +43,17 @@ class Game
     end
   end
 
-  def save(randomWordArray, temp, guessed, lives)
-    yaml = YAML::dump(randomWordArray, temp, guessed, lives)
-    game_file = GameFile.new("/saved.yaml")
-    game_file.write(yaml)
+  def save()
+    game_data = {word: $randomWord, lives: $lives, guesses: $guessed, temp: $temp}.to_yaml
+    File.open("saved.yml", 'w') {|file| file.write(game_data)}
   end
 
-  def load
+  def load()
+    game_data = YAML::load_file("D:/! Documents/GitHub/projectOdin/hangman/saved.yml")
+    $randomWord = game_data[:word]
+    $lives = game_data[:lives]
+    $guessed = game_data[:guesses]
+    $temp = game_data[:temp]
   end
+
 end

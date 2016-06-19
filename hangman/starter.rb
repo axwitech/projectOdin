@@ -13,9 +13,13 @@ while($lives > 0)
   guess = gets.chomp
   puts "You guessed #{guess}"
   if guess == "save"
+    game.save()
     puts "Saved"
-    game.save($randomWordArray, $temp, $guessed, $lives)
     break
+  elsif guess == "load"
+    game.load
+    puts "loaded"
+    puts $temp + "You've guessed #{$guessed}"
   else
     game.check(guess)
   end

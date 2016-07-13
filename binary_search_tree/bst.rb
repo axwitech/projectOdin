@@ -1,5 +1,28 @@
 class Node
-	attr_accessor :value
-	attr_accessor :parent
-	attr_accessor :child
+  attr_accessor :child
+  attr_accessor :value
+  attr_accessor :parent
+
+  def initialize(value, child, parent)
+    @value = value
+    @parent = parent
+    @child = child
+  end
 end
+array = [1, 7, 4, 23, 8, 9, 4, 3, 5, 7, 9, 67, 6345, 324]
+$tree = []
+def build_tree(array)
+  array.each_index{ |index|
+    if array.first
+      node = Node.new(array[index],array[index+1],nil)
+      $tree << node
+    else
+      node = Node.new(array[index],array[index+1],array[index-1])
+      $tree << node
+    end
+  }
+end
+
+
+build_tree(array)
+$tree.each {|node| puts node.value}

@@ -1,9 +1,8 @@
 ---
-:word: |
-  precipitance
-:lives: 4
+:word: "Borodin\r\n"
+:lives: 2
 :guesses:
-- a
-- l
-- p
-:temp: 'p _ _ _ a _ _ _ _ _ _ '
+- A
+- L
+- C
+:temp: '_ _ _ _ _ _ _ '

@@ -1,3 +1,3 @@
 # projectOdin
 
-#A repo for projectOdin projects http://www.theodinproject.com/
+#A repo for projectOdin tasks http://www.theodinproject.com/

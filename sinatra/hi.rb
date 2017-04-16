@@ -2,7 +2,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 $number = rand(101)
 $message = 'Try to guess'
-   get '/' do
+   get '/hi' do
      erb :index, :locals => {:number => $number, :message => $message}
      if params['guess'] != nil
        check(params['guess'])
